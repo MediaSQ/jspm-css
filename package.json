@@ -9,6 +9,7 @@
   },
   "jspm": {
     "dependencies": {
+      "csswring": "npm:csswring@^4.2.1",
       "fs": "github:jspm/nodelibs-fs@^0.1.2",
       "postcss": "npm:postcss@^5.0.14",
       "postcss-import": "npm:postcss-import@^7.1.3",

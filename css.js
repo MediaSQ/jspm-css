@@ -1,6 +1,7 @@
 import fs from 'fs';
 
 import postcss from 'postcss';
+import csswring from 'csswring';
 import nested from 'postcss-nested';
 import imports from 'postcss-import';
 import vars from 'postcss-simple-vars';
@@ -35,7 +36,7 @@ function process(load) {
   let sourceFile = load.address.replace('file://', '');
   let css = fs.readFileSync(sourceFile, { encoding: 'utf8' });
 
-  return postcss([ imports, mixin, extend, vars, nested, autoprefixer ]).process(css, { from: sourceFile });
+  return postcss([ imports, mixin, extend, vars, nested, autoprefixer, csswring() ]).process(css, { from: sourceFile });
 }
 
 export function fetch() {
