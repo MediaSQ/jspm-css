@@ -1,0 +1,26 @@
+{
+  "author": "MediaSQ",
+  "name": "MediaSQ/sweetspot-front-jspm-css",
+  "version": "1.0.0",
+  "description": "PostCSS processor for loading CSS with SystemJS",
+  "main": "css.js",
+  "devDependencies": {
+    "jspm": "^0.16.24"
+  },
+  "jspm": {
+    "dependencies": {
+      "fs": "github:jspm/nodelibs-fs@^0.1.2",
+      "postcss": "npm:postcss@^5.0.14",
+      "postcss-import": "npm:postcss-import@^7.1.3",
+      "postcss-nested": "npm:postcss-nested@^1.0.0",
+      "postcss-sassy-mixins": "npm:postcss-sassy-mixins@^2.0.0",
+      "postcss-simple-extend": "npm:postcss-simple-extend@^1.0.0",
+      "postcss-simple-vars": "npm:postcss-simple-vars@^1.2.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
