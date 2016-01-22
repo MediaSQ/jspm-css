@@ -1,50 +1,48 @@
 import fs from 'fs';
 
 import postcss from 'postcss';
-import csswring from 'csswring';
 import nested from 'postcss-nested';
+import extend from 'postcss-extend';
 import imports from 'postcss-import';
 import vars from 'postcss-simple-vars';
 import mixin from 'postcss-sassy-mixins';
+import media from 'postcss-custom-media';
 import autoprefixer from './autoprefixer';
-import extend from 'postcss-simple-extend';
-
-const inject = `(function(css){
-  var head = document.getElementsByTagName('head')[0];
-  var cssNodeText = document.createTextNode(css);
-  var style = document.createElement('style');
-
-  style.type = 'text/css';
-  style.appendChild(cssNodeText);
-  head.appendChild(style);
-})`;
-
-function escape(source) {
-  return source
-    .replace(/(["\\])/g, '\\$1')
-    .replace(/(['\\])/g, '\\$1')
-    .replace(/[\f]/g, "\\f")
-    .replace(/[\b]/g, "\\b")
-    .replace(/[\n]/g, "\\n")
-    .replace(/[\t]/g, "\\t")
-    .replace(/[\r]/g, "\\r")
-    .replace(/[\u2028]/g, "\\u2028")
-    .replace(/[\u2029]/g, "\\u2029");
-}
 
 function process(load) {
   let sourceFile = load.address.replace('file://', '');
   let css = fs.readFileSync(sourceFile, { encoding: 'utf8' });
 
-  return postcss([ imports, mixin, extend, vars, nested, autoprefixer, csswring() ]).process(css, { from: sourceFile });
+  return postcss([
+    imports,
+    mixin,
+    extend,
+    nested,
+    vars,
+    media,
+    autoprefixer
+  ]).process(css, { from: sourceFile });
+}
+
+function write(opts) {
+  var loaderOptions = opts;
+
+  return function(result) {
+    let css = result.css;
+    let dir = loaderOptions.cssDirectory;
+    let fileName = loaderOptions.cssFileName;
+
+    fs.mkdirSync(dir);
+    fs.writeFileSync(dir + '/' + fileName, css);
+  }
 }
 
 export function fetch() {
   return '';
 };
 
-export function bundle(loads) {
+export function bundle(loads, opts) {
   return process(loads[0])
-    .then((result) => `${inject}('${escape(result.css)}');`)
+    .then(write(opts))
     .catch((error) => console.error(error));
 };
