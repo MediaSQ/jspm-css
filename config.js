@@ -16,22 +16,19 @@ System.config({
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "core-js": "npm:core-js@1.2.6",
-    "csswring": "npm:csswring@4.2.1",
     "fs": "github:jspm/nodelibs-fs@0.1.2",
     "postcss": "npm:postcss@5.0.14",
+    "postcss-custom-media": "npm:postcss-custom-media@5.0.0",
+    "postcss-extend": "npm:postcss-extend@1.0.1",
     "postcss-import": "npm:postcss-import@7.1.3",
     "postcss-nested": "npm:postcss-nested@1.0.0",
     "postcss-sassy-mixins": "npm:postcss-sassy-mixins@2.0.0",
-    "postcss-simple-extend": "npm:postcss-simple-extend@1.0.0",
     "postcss-simple-vars": "npm:postcss-simple-vars@1.2.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.6.0"
-    },
-    "github:jspm/nodelibs-constants@0.1.0": {
-      "constants-browserify": "npm:constants-browserify@0.0.1"
     },
     "github:jspm/nodelibs-events@0.1.1": {
       "events": "npm:events@1.0.2"
@@ -44,9 +41,6 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
-    },
-    "github:jspm/nodelibs-vm@0.1.0": {
-      "vm-browserify": "npm:vm-browserify@0.0.4"
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
@@ -66,32 +60,11 @@ System.config({
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:constants-browserify@0.0.1": {
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
-    },
     "npm:core-js@1.2.6": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
-    },
-    "npm:csswring@4.2.1": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "fs-extra": "npm:fs-extra@0.18.4",
-      "minimist": "npm:minimist@1.2.0",
-      "onecolor": "npm:onecolor@2.5.0",
-      "postcss": "npm:postcss@5.0.14",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
-    },
-    "npm:fs-extra@0.18.4": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "graceful-fs": "npm:graceful-fs@3.0.8",
-      "jsonfile": "npm:jsonfile@2.2.3",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "rimraf": "npm:rimraf@2.5.0"
     },
     "npm:glob@5.0.15": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -119,14 +92,6 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:graceful-fs@3.0.8": {
-      "assert": "github:jspm/nodelibs-assert@0.1.0",
-      "constants": "github:jspm/nodelibs-constants@0.1.0",
-      "module": "github:jspm/nodelibs-module@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "util": "github:jspm/nodelibs-util@0.1.0",
-      "vm": "github:jspm/nodelibs-vm@0.1.0"
-    },
     "npm:has-flag@1.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -141,9 +106,6 @@ System.config({
     "npm:js-base64@2.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:jsonfile@2.2.3": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2"
-    },
     "npm:minimatch@3.0.0": {
       "brace-expansion": "npm:brace-expansion@1.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0"
@@ -155,6 +117,13 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:path-is-absolute@1.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:postcss-custom-media@5.0.0": {
+      "postcss": "npm:postcss@5.0.14"
+    },
+    "npm:postcss-extend@1.0.1": {
+      "postcss": "npm:postcss@5.0.14",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:postcss-import@7.1.3": {
@@ -178,10 +147,6 @@ System.config({
       "postcss": "npm:postcss@5.0.14",
       "postcss-simple-vars": "npm:postcss-simple-vars@1.2.0"
     },
-    "npm:postcss-simple-extend@1.0.0": {
-      "postcss": "npm:postcss@5.0.14",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:postcss-simple-vars@1.2.0": {
       "postcss": "npm:postcss@5.0.14"
     },
@@ -202,13 +167,6 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:rimraf@2.5.0": {
-      "assert": "github:jspm/nodelibs-assert@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "glob": "npm:glob@6.0.4",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:source-map@0.5.3": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -219,9 +177,6 @@ System.config({
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:vm-browserify@0.0.4": {
-      "indexof": "npm:indexof@0.0.1"
     }
   }
 });
