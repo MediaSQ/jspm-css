@@ -2,7 +2,6 @@ import fs from 'fs';
 
 import postcss from 'postcss';
 import nested from 'postcss-nested';
-import extend from 'postcss-extend';
 import imports from 'postcss-import';
 import vars from 'postcss-simple-vars';
 import mixin from 'postcss-sassy-mixins';
@@ -16,7 +15,6 @@ function process(load) {
   return postcss([
     imports,
     mixin,
-    extend,
     nested,
     vars,
     media,

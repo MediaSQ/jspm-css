@@ -19,7 +19,6 @@ System.config({
     "fs": "github:jspm/nodelibs-fs@0.1.2",
     "postcss": "npm:postcss@5.0.14",
     "postcss-custom-media": "npm:postcss-custom-media@5.0.0",
-    "postcss-extend": "npm:postcss-extend@1.0.1",
     "postcss-import": "npm:postcss-import@7.1.3",
     "postcss-nested": "npm:postcss-nested@1.0.0",
     "postcss-sassy-mixins": "npm:postcss-sassy-mixins@2.0.0",
@@ -121,10 +120,6 @@ System.config({
     },
     "npm:postcss-custom-media@5.0.0": {
       "postcss": "npm:postcss@5.0.14"
-    },
-    "npm:postcss-extend@1.0.1": {
-      "postcss": "npm:postcss@5.0.14",
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:postcss-import@7.1.3": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
