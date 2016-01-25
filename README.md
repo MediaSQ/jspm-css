@@ -39,4 +39,4 @@ Because of the `jspm` name collision policy, the CSS files cannot be placed with
 
 ***
 
-&copy; MediaSQ
+© MediaSQ
