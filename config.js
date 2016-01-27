@@ -18,6 +18,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "fs": "github:jspm/nodelibs-fs@0.1.2",
     "postcss": "npm:postcss@5.0.14",
+    "postcss-calc": "npm:postcss-calc@5.2.0",
     "postcss-custom-media": "npm:postcss-custom-media@5.0.0",
     "postcss-import": "npm:postcss-import@7.1.3",
     "postcss-nested": "npm:postcss-nested@1.0.0",
@@ -118,6 +119,11 @@ System.config({
     "npm:path-is-absolute@1.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:postcss-calc@5.2.0": {
+      "postcss": "npm:postcss@5.0.14",
+      "postcss-message-helpers": "npm:postcss-message-helpers@2.0.0",
+      "reduce-css-calc": "npm:reduce-css-calc@1.2.0"
+    },
     "npm:postcss-custom-media@5.0.0": {
       "postcss": "npm:postcss@5.0.14"
     },
@@ -155,6 +161,13 @@ System.config({
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:reduce-css-calc@1.2.0": {
+      "balanced-match": "npm:balanced-match@0.1.0",
+      "reduce-function-call": "npm:reduce-function-call@1.0.1"
+    },
+    "npm:reduce-function-call@1.0.1": {
+      "balanced-match": "npm:balanced-match@0.1.0"
     },
     "npm:resolve@1.1.6": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
