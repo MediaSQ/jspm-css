@@ -18,6 +18,6 @@ export function transform(css, sourceFile) {
     media,
     calc,
     autoprefixer
-  ]).use(hover('u-hoverable')
+  ]).use(hover('u-hoverable'))
     .process(css, { from: sourceFile });
 };
