@@ -17,6 +17,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "core-js": "npm:core-js@1.2.6",
     "fs": "github:jspm/nodelibs-fs@0.1.2",
+    "mediaSQ/postcss-hover-prefix": "github:mediaSQ/postcss-hover-prefix@1.1.0",
     "postcss": "npm:postcss@5.0.14",
     "postcss-calc": "npm:postcss-calc@5.2.0",
     "postcss-custom-media": "npm:postcss-custom-media@5.0.0",
