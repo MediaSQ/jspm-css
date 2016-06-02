@@ -9,6 +9,7 @@ Custom `jspm` plugin for loading CSS by applying some PostCSS transformations:
 1. [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 1. [autoprefixer](https://github.com/postcss/autoprefixer)
 1. [postcss-calc](https://github.com/postcss/postcss-calc)
+1. [postcss-hover-prefix](https://github.com/mediasq/postcss-hover-prefix)
 
 ## Installation
 
