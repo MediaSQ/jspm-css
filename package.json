@@ -1,7 +1,7 @@
 {
   "author": "MediaSQ",
   "name": "sweetspot-front-jspm-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostCSS processor for loading CSS with SystemJS",
   "license": "MIT",
   "main": "css.js",
